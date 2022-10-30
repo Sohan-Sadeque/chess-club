@@ -1,45 +1,491 @@
-body {
-  background-color: #EADEDE;
-  color: #FFFFFF;
-  margin: 0;
-}
-h1 {
-  font-size: 10rem;
-  text-align: center;
-}
-#nav ul{
-  list-style-type: none;
+#nav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000000;
-  text-align: center;
-}
-#nav ul li {
-  float: left;
-}
-#nav ul li a {
-  display: block;
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 20px 100px;
-  text-decoration: none;
-}
-#nav li a:hover {
-  background-color: #111;
-}
-#header {
-  position: absolute;
-  left: 0;
+  background-color: black;
+  text-align: right;
   width: 100%;
-  height: 40%;
-  background-image: url("../images/chessboard.avif");
+  height: 49vw;
 }
-p {
+.lobbie {
+z-index: 1;
+float: left;
+}
+.dropbtn {
+  background-color: orange;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.res {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: white;
+  cursor: pointer;
+}
+
+.dropdown {
   position: relative;
-  top: 20rem;
-  color: #9f9f9f;
-  margin: 10rem;
-  font-size: 2rem;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: orange;
+	color: white
+	}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: grey;
+}
+
+.dropdown:hover .res {
+  background-color: grey;
+  color: white;
+}
+@media only screen and (max-width: 100%) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+#bg {
+background-color: black;
+font-family: "Times New Roman", Times, serif;
+position: fixed;
+width: 100%;
+}
+.lob {
+float: left;
+spacing 4vw;
+text-decoration: none;
+color: white;
+}
+body {
+background-image: url("Images/wavebg.jpg");
+margin: 0px;
+text-decoration: none;
+background-attachment: fixed;
+}
+a {
+color: white;
+text-decoration: none;
+}
+.lunch1 {
+text-align: center;
+font-size: 5vw;
+color: white;
+background-image: url("Images/dinner1.jpg");
+background-attachment: fixed;
+height: 23vw;
+width: 100%;
+}
+.dinner1 {
+text-align: center;
+font-size: 5vw;
+color: white;
+background-image: url("Images/locations1.jpg");
+background-attachment: fixed;
+height: 23vw;
+width: 100%;
+}
+.events1 {
+text-align: center;
+font-size: 5vw;
+color: white;
+background-image: url("Images/lunch1.jpg");
+background-attachment: fixed;
+height: 23vw;
+width: 49.5%;
+float: left;
+}
+.locations1 {
+text-align: center;
+font-size: 5vw;
+color: white;
+background-image: url("Images/events1.jpg");
+background-attachment: fixed;
+height: 23vw;
+width: 49.5%;
+float: right;
+}
+.ml {
+background-color: rgba(0,0,0,0.40);
+border-radius: 25px;
+padding: 10px;
+}
+.hl {
+background-color: rgba(0,0,0,0.40);
+border-radius: 25px;
+padding: 10px;
+}
+.sl {
+background-color: rgba(0,0,0,0.40);
+border-radius: 12px;
+padding: 5px;
+}
+.ml:hover {
+	font-size: 6vw;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 70%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+footer {
+height: 10%;
+text-align: left;
+padding: 5px;
+}
+#log {
+	font-size: 1vw;
+	color: white;
+	text-align: center;
+	background-color: white;
+	padding: 10px;
+}
+.lunchp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/lunch2.jpg");
+}
+.dinnerp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/dinner2.jpg");
+}
+h2 {
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+}
+.food1 {
+text-align: center;
+font-size: 5vw;
+color: white;
+height: 23vw;
+width: 30%;
+float: left;
+margin: 5px;
+border-radius: 20px;
+transition: margin .5s;
+}
+#luncha {
+	background-image: url("Images/shrimp.jpg");
+}
+#lunchd {
+	background-image: url("Images/spaget.jpg");
+}
+#kidsa {
+	background-image: url("Images/mac.jpg");
+}
+#dinnera {
+	background-image: url("Images/surf.jpg");
+}
+#dinnerd {
+	background-image: url("Images/salmon.jpg");
+}
+#desserta {
+	background-image: url("Images/cake.jpg");
+}
+#dessertd {
+	background-image: url("Images/don.jpg");
+}
+#drinka {
+	background-image: url("Images/juice.jpg");
+}
+#drinkd {
+	background-image: url("Images/cocaine.jpg");
+}
+#appb {
+	background-image: url("Images/salad.jpg");
+}
+#loca {
+	background-image: url("Images/canada.jpg");
+}
+.food1:hover {
+	margin: 15px;
+}
+.food2 {
+text-align: center;
+font-size: 5vw;
+color: white;
+height: 23vw;
+width: 30%;
+float: right;
+margin: 5px;
+border-radius: 20px;
+transition: margin .5s;
+}
+#lunchb {
+	background-image: url("Images/chips.jpg");
+}
+#lunche {
+	background-image: url("Images/shrimprice.jpg");
+}
+#kidsb {
+	background-image: url("Images/chickstrips.jpg");
+}
+#dinnerb {
+	background-image: url("Images/king.jpg");
+}
+#dinnere {
+	background-image: url("Images/hali.jpg");
+}
+#dessertb {
+	background-image: url("Images/ice.jpg");
+}#desserte {
+	background-image: url("Images/fro.jpg");
+}
+#drinkb {
+	background-image: url("Images/smooth.jpg");
+}
+#drinke {
+	background-image: url("Images/spr.jpg");
+}
+#appa {
+	background-image: url("Images/shrimpapp.jpg");
+}
+#locb {
+	background-image: url("Images/quay.jpg");
+}
+.food2:hover {
+	margin: 15px;
+}
+.food3 {
+text-align: center;
+font-size: 5vw;
+color: white;
+height: 23vw;
+width: 30%;
+float: center;
+margin-left: 35%;
+border-radius: 20px;
+transition: margin .5s;
+}
+#lunchc {
+	background-image: url("Images/lobster.jpg");
+}
+#lunchf {
+	background-image: url("Images/crabmac.jpg");
+}
+#kidsc {
+	background-image: url("Images/shrimpfry.jpg");
+}
+#dinnerf {
+	background-image: url("Images/oysters.jpg");
+}
+#dessertc {
+	background-image: url("Images/creme.jpg");
+}
+#dessertf {
+	background-image: url("Images/milk.jpg");
+}
+#drinkc {
+	background-image: url("Images/eau.jpg");
+}
+#drinkf {
+	background-image: url("Images/fan.jpg");
+}
+#appc {
+	background-image: url("Images/chow.jpg");
+}
+#locc {
+	background-image: url("Images/gary.jpg");
+}
+.food3:hover {
+	margin-top: 15px;
+}
+.fl {
+border-radius: 25px;
+padding: 10px;
+font-size: 2vw;
+color: white;
+background-color: rgba(0,0,0,0.40);
+}
+.des{
+font-size: 1.5vw;
+color: white;
+background-color: rgba(0,0,0,0.40);
+}
+h1 {
+	color: white;
+	text-align: center;
+}
+.sides {
+	color: white;
+	text-align: center;
+}
+.dessertsp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/desserts2.jpg");
+}
+.drinksp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/drinks.jpg");
+}
+.appsp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/app.jpg");
+}
+.contact{
+	text-align: center;
+	color: white;
+	font-size: 4vw;
+}
+.locationsp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/dir.jpg");
+}
+.navigationp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/locations2.jpg");
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.table{
+background-color: white;
+}
+.closedp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/closed.jpg");
+}
+#topnav {
+  overflow: hidden;
+  padding: 5px;
+margin-left: 15vw;
+visibility: visible;
+}
+
+#topnav input[type=text] {
+  float: left;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+  
+  #topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+#reserved{
+font-size: 3.5vw;
+}
+.dealsp{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/deals.jpg");
+}
+#limit {
+text-align: center;
+font-size: 5vw;
+color: white;
+height: 23vw;
+width: 60%;
+float: right;
+margin: 5px;
+border-radius: 20px;
+transition: margin .5s;
+background-image: url("Images/lim.jpg");
+}
+.cuisinep{
+text-align: center;
+color: white;
+font-family: "Times New Roman", Times, serif;
+font-size: 6vw;
+background-image: url("Images/cuisine.jpg");
 }
